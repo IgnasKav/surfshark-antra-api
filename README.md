@@ -17,5 +17,5 @@ Run the project:
 ```bash
 npm run dev
 # or
-yarn dev
+yarn start:dev
 ```

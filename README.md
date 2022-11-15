@@ -15,7 +15,7 @@ Create Docker containers
 Run the project:
 
 ```bash
-npm run dev
+npm run start:dev
 # or
 yarn start:dev
 ```

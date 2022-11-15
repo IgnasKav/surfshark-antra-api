@@ -4,6 +4,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import * as Joi from '@hapi/joi';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { HttpModule } from '@nestjs/axios';
+import { CommentEntity } from './entities/comment.entity';
 
 @Module({
   imports: [
@@ -26,6 +28,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       autoLoadEntities: true,
       synchronize: true, // in production should be false
     }),
+    TypeOrmModule.forFeature([CommentEntity]),
+    HttpModule,
   ],
   controllers: [AppController],
   providers: [AppService],

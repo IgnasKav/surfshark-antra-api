@@ -18,8 +18,11 @@ export class CommentEntity {
   comment: string;
 
   @Column()
-  postedAt: string;
+  postedAt: Date;
 
   @Column()
   numberOfLikes: number;
+
+  @Column()
+  updateDate: Date;
 }
